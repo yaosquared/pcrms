@@ -27,10 +27,8 @@ const SignUpForm = () => {
   return (
     <div className="rounded-xl shadow-md w-[90%] md:w-[50%] lg:w-[44%] xl:w-[26%] p-10 flex flex-col justify-center items-center space-y-6 bg-white/80 backdrop-blur-lg dark:bg-[#101720] text-foreground text-sm lg:text-base">
       <div className="w-full px-2 xl:px-6 flex flex-col items-start gap-1">
-        <h2 className="font-light text-gray-500 dark:text-gray-400">
-          Welcome!
-        </h2>
-        <h3 className="font-semibold text-xl lg:text-2xl">
+        <h2 className="text-sm text-gray-500 dark:text-gray-400">Welcome!</h2>
+        <h3 className="text-2xl font-semibold tracking-tight">
           Create your account
         </h3>
       </div>
@@ -61,9 +59,12 @@ const SignUpForm = () => {
         </div>
         <SignUpButton />
       </form>
-      <p className="text-xs lg:text-sm text-gray-500">
+      <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
         Already have an account?{" "}
-        <Link href="/sign-in" className="underline text-blue-500 font-medium">
+        <Link
+          href="/sign-in"
+          className="font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+        >
           Sign in
         </Link>
       </p>

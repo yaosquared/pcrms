@@ -38,10 +38,10 @@ const SignInForm = () => {
   return (
     <div className="rounded-xl shadow-md w-[90%] md:w-[50%] lg:w-[44%] xl:w-[26%] p-10 flex flex-col justify-center items-center space-y-6 bg-white/80 backdrop-blur-lg dark:bg-[#101720] text-foreground text-sm lg:text-base">
       <div className="w-full px-2 xl:px-6 flex flex-col items-start gap-1">
-        <h2 className="font-light text-gray-500 dark:text-gray-400">
-          Welcome back!
+        <h2 className="text-sm text-gray-500 dark:text-gray-400">
+          Welcome back
         </h2>
-        <h3 className="font-semibold text-xl lg:text-2xl">
+        <h3 className="text-2xl font-semibold tracking-tight">
           Sign in to your account
         </h3>
       </div>
@@ -73,17 +73,20 @@ const SignInForm = () => {
           </button>
         </div>
         <SignInButton />
-        <p className="text-xs lg:text-sm text-gray-500">
-          Don&apos;t have an account?{" "}
-          <Link href="/sign-up" className="underline text-blue-500 font-medium">
+        <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
+          Don’t have an account?{" "}
+          <Link
+            href="/sign-up"
+            className="font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+          >
             Sign up
           </Link>
         </p>
       </form>
-      <div className="w-full flex items-center gap-2 px-2 xl:px-6">
-        <hr className="flex-grow border-t border-gray-300" />
-        <span className="text-gray-400 text-xs">Or</span>
-        <hr className="flex-grow border-t border-gray-300" />
+      <div className="w-full flex items-center gap-3 px-2 xl:px-6 text-xs text-gray-500 dark:text-gray-400">
+        <div className="h-px flex-1 bg-black/20 dark:bg-white/20" />
+        <span className="whitespace-nowrap">Or</span>
+        <div className="h-px flex-1 bg-black/20 dark:bg-white/20" />
       </div>
       <div className="w-full px-2 xl:px-6">
         <GithubSignIn />
